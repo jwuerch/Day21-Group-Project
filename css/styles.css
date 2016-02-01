@@ -36,12 +36,13 @@
 }
 
 .education-col {
-  margin-right:30px;
+  margin-right:35px;
 }
 
 .education-col, .jobs-col {
   box-shadow: 1px 3px 4px 2px rgba(0,0,0,0.2), inset 0px 0px 2px 1px #fff;
   border:1px solid #D7D7E4;
+  margin-bottom:50px;
 }
 
 .widget {
@@ -60,4 +61,8 @@
 
 #widget-1 {
   height:165px;
+}
+
+#row-3 {
+  display:none;
 }
