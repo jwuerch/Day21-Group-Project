@@ -68,6 +68,7 @@
   /*display:none;*/
 }
 
-#java, #javascript, #ruby, #php, #cSharp, #css {
+
+.java, .javascript, .ruby, .php, .cSharp, .css {
   display:none;
 }
