@@ -8,12 +8,12 @@
   border-radius:0px;
 }
 
-form {
+.language-form {
   width:50%;
   margin:0 auto;
 }
 
-.btn-primary {
+.language-btn {
   font-size:20px;
 }
 
@@ -30,15 +30,34 @@ form {
 }
 
 .sidebar {
-  width:300px;
+  width:332px;
   float:right;
+
 }
 
 .education-col {
   margin-right:30px;
 }
 
-.col-sm-4 {
+.education-col, .jobs-col {
   box-shadow: 1px 3px 4px 2px rgba(0,0,0,0.2), inset 0px 0px 2px 1px #fff;
-  border:1px solid #d2d2d2;
+  border:1px solid #D7D7E4;
+}
+
+.widget {
+  border:1px solid #D7D7E4;
+  height:300px;
+  width:300px;
+  height:300px;
+  padding:15px;
+  padding-top:8px;
+  box-shadow: 1px 3px 4px 2px rgba(0,0,0,0.2), inset 0px 0px 2px 1px #fff;
+}
+
+#widget-title-box-1 {
+  height:40px;
+}
+
+#widget-1 {
+  height:165px;
 }
