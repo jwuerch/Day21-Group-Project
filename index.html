@@ -11,23 +11,55 @@
   <body>
     <form id = "jobSearch">
 
-    <div class = "container">
-      <div class = "jumbotron"><h1>Find the Best Job Ever for You</h1></div>
-      <label for = "language">Select your core language learned at Epicodus:</label>
-      <select id = "language">
-        <option value = "java">Java</option>
-        <option value = "javascript">Javascript</option>
-        <option value = "ruby">Ruby</option>
-        <option value = "php">PHP</option>
-        <option value = "c#">C#</option>
-        <option value = "css">CSS</option>
+    <div class="container">
+      <div class="jumbotron"><h1>Find the Best Job Ever for You</h1></div>
+      <label for="language">Select your core language learned at Epicodus:</label>
+      <select id="language">
+        <option value="java">Java</option>
+        <option value="javascript">Javascript</option>
+        <option value="ruby">Ruby</option>
+        <option value="php">PHP</option>
+        <option value="cSharp">C#</option>
+        <option value="css">CSS</option>
       </select>
       <br>
       <button type="submit" class="btn btn-primary">Click</button>
-      <div class = "java">
-        <a href = "http://www.indeed.com/jobs?q=java&l=Portland%2C+OR">Indeed Java job listings </a>
-        <a href = "https://portland.craigslist.org/search/jjj?query=java&sort=rel">Craigslist Java Job listings </a>
-        <a href = "http://jobs.monster.com/search/?q=Java%20Software%20Engineer&where=Portland%2C%20OR">Monster Java Job listings </a>
+
+      <div class="language-box">
+        <div class="java">
+          <a href="http://www.indeed.com/jobs?q=java&l=Portland%2C+OR">Indeed Java job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?query=java&sort=rel">Craigslist Java Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=Java%20Software%20Engineer&where=Portland%2C%20OR">Monster Java Job listings </a>
+        </div>
+
+        <div class="javascript">
+          <a href="http://www.indeed.com/jobs?q=javascript&l=Portland%2C+OR">Indeed Javascript job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?sort=rel&is_paid=all&search_distance_type=mi&query=javascript">Craigslist Javascript Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=javascript&where=Portland__2C-OR">Monster Javascript Job listings </a>
+        </div>
+        <div class="ruby">
+          <a href="http://www.indeed.com/jobs?q=ruby&l=Portland%2C+OR">Indeed Ruby job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?sort=rel&is_paid=all&search_distance_type=mi&query=ruby">Craigslist Ruby Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=ruby-developer&where=Portland__2C-OR">Monster Ruby Job listings </a>
+        </div>
+
+        <div class="php">
+          <a href="http://www.indeed.com/jobs?q=php&l=Portland%2C+OR">Indeed PHP job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?sort=rel&is_paid=all&search_distance_type=mi&query=php">Craigslist PHP Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=php-developer&where=Portland__2C-OR">Monster PHP Job listings </a>
+        </div>
+
+        <div class="cSharp">
+          <a href="http://www.indeed.com/jobs?q=c%23&l=Portland%2C+OR">Indeed C# job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?sort=rel&is_paid=all&search_distance_type=mi&query=C%23">Craigslist C# Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=c__23-developer&where=Portland__2C-OR">Monster C# Job listings </a>
+        </div>
+
+        <div class="css">
+          <a href="http://www.indeed.com/jobs?q=CSS&l=Portland%2C+OR">Indeed CSS job listings </a>
+          <a href="https://portland.craigslist.org/search/jjj?sort=rel&is_paid=all&search_distance_type=mi&query=css">Craigslist CSS Job listings </a>
+          <a href="http://jobs.monster.com/search/?q=css-developer&where=Portland__2C-OR">Monster CSS Job listings </a>
+        </div>
       </div>
 
     </div>
