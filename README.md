@@ -2,7 +2,7 @@
 
 ## About The Author
 
-The author is Jason Wuerch. He is currently located in Portland, Oregon as an up-and-coming programmer.
+The author is Jason Wu. He is currently located in Portland, Oregon as an up-and-coming programmer.
 
 ## Pizza
 
