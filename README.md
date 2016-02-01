@@ -1,17 +1,25 @@
-# Readme File
+# Portland Job Search in the High Tech Industry
 
-## About The Author
+## Authors
 
-The author is Jason Wu. He is currently located in Portland, Oregon as an up-and-coming programmer.
-
-## Pizza
-
-This project was made at Epicodus Coding School and is the final project of week 4.
+The authors on the project are: Jason Wuerch, Erik Tolentino, Polina Nenchev, Alex Larson.
 
 ## Description
 
-This project allows you to determine the price of your desired pizza.
+This project will allow the user to select specific criteria which will then display a list of job openings that the user qualifies for. Criteria is geared towards Epicodus students and the job listings are gathered from the Portland Metro Area. To apply for the specific job, the application will allow the user to click on the actual link of the company hiring.
+
+
+### Technologies Used:
+* Atom
+* Terminal
+* CSS, HTML
+* Javascript, jquery
+* Specs
+* GitHub
+* Bootstrap
+* Mocha and Chai js
+
 
 ## Copyright and License Information
 
-This project is copyrighted by Jason Wuerch. Please ask for permission to use.
+This project is copyrighted by Jason Wuerch, Erik Tolentino, Polina Nenchev, Alex Larson. Please ask for permission to use.

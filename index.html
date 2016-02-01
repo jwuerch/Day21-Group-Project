@@ -2,12 +2,35 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Jason's Pizza Company</title>
+    <title>Job Board</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
+    <form id = "jobSearch">
+
+    <div class = "container">
+      <div class = "jumbotron"><h1>Find the Best Job Ever for You</h1></div>
+      <label for = "language">Select your core language learned at Epicodus:</label>
+      <select id = "language">
+        <option value = "java">Java</option>
+        <option value = "javascript">Javascript</option>
+        <option value = "ruby">Ruby</option>
+        <option value = "php">PHP</option>
+        <option value = "c#">C#</option>
+        <option value = "css">CSS</option>
+      </select>
+      <br>
+      <button type="submit" class="btn btn-primary">Click</button>
+      <div class = "java">
+        <a href = "http://www.indeed.com/jobs?q=java&l=Portland%2C+OR">Indeed Java job listings </a>
+        <a href = "https://portland.craigslist.org/search/jjj?query=java&sort=rel">Craigslist Java Job listings </a>
+        <a href = "http://jobs.monster.com/search/?q=Java%20Software%20Engineer&where=Portland%2C%20OR">Monster Java Job listings </a>
+      </div>
+
+    </div>
+  </form>
   </body>
 </html>
