@@ -1,3 +1,4 @@
+
 .jumbotron {
   background-image: url("../img/jumbotron-image.jpg");
   height:440px;
@@ -65,4 +66,8 @@
 
 #row-3 {
   /*display:none;*/
+}
+
+#java, #javascript, #ruby, #php, #cSharp, #css {
+  display:none;
 }
