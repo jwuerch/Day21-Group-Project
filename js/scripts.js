@@ -30,6 +30,7 @@ $(document).ready(function() {
 
   $(".language-btn").click(function(event) {
     event.preventDefault();
+    $(".language-links").hide();
 
 
     $("#row-2").fadeOut(400);
@@ -37,19 +38,18 @@ $(document).ready(function() {
     $("#row-3").addClass("animated slideInUp");
 
     var input = $("#selection").val()
-    console.log(input)
     if(input === "java") {
-      $("#java").show();
+      $(".java").show();
     } else if (input === "javascript") {
-      $("#javascript").show();
+      $(".javascript").show();
     } else if (input === "ruby") {
-      $("#ruby").show();
+      $(".ruby").show();
     } else if (input === "php") {
-      $("#php").show();
+      $(".php").show();
     } else if (input === "cSharp") {
-      $("#cSharp").show();
+      $(".cSharp").show();
     } else if (input === "css") {
-      $("#css").show();
+      $(".css").show();
     };
   });
 });
