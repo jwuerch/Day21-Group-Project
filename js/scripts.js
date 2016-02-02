@@ -8,21 +8,21 @@ Students.prototype.pickLanguage = function (input) {
   return this.coreLanguage;
 }
 
-function contactForm(fullName, city, field) {
-  this.fullName = fullName;
-  this.city = city;
-  this.field = field;
-}
+// function contactForm(fullName, city, field) {
+//   this.fullName = fullName;
+//   this.city = city;
+//   this.field = field;
+// }
+//
+// contactForm.prototype.fullcontactForm = function () {
+//   return this.fullName +", " + this.city + ", " + this.field;
+// }
 
-contactForm.prototype.fullcontactForm = function () {
-  return this.fullName +", " + this.city + ", " + this.field;
-}
-
-
+//
 $(document).ready(function() {
-  $("#meetupForm").click(function() {
+  // $("#meetupForm").click(function() {
 
-  }
+
 //  add form to display- use the address book example. update index as well
 
 
