@@ -24,6 +24,14 @@ Skills.prototype.allSkills= function() {
   return this.firstSkill + ", " + this.secondSkill + ", " + this.thirdSkill;
 }
 
+function resetFields() {
+  $("input#full-name").val("");
+  $("input#new-education").val("");
+  $("input#skill-one").val("");
+  $("input#skill-two").val("");
+  $("input#skill-three").val("");
+}
+
 $(document).ready(function() {
   $(".language-btn").click(function(event) {
     event.preventDefault();
@@ -83,6 +91,8 @@ $(document).ready(function() {
         $("ul#skillsOutput").append("<li>" + skill.allSkills() + "</li>");
       });
     });
+
+    resetFields();
 
   });
 });

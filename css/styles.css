@@ -71,3 +71,12 @@
 #java, #javascript, #ruby, #php, #cSharp, #css {
   display:none;
 }
+
+#show-contact {
+  display: none;
+}
+
+#portfolios {
+  cursor: pointer;
+  color: #0088cc;
+}
