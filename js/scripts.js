@@ -17,35 +17,16 @@ for (var i = 0; i < this.desires.length; i++) {
   };
 };
 
-
-
-
-
-function Students(coreLanguage) {
-  this.coreLanguage = coreLanguage;
-}
-
-Students.prototype.pickLanguage = function (input) {
-  this.coreLanguage = input;
-  return this.coreLanguage;
-}
-
-
-function Portfolio(fullName, Skills, Education) {
+function Student(languageList, fullName, skills, education) {
+  this.languageList = languageList
   this.fullName = fullName;
-  this.Skills = [];
-  this.Education = Education;
-}
+  this.skills = skills;
+  this.education = education;
+};
 
-function Skills(firstSkill, secondSkill, thirdSkill) {
-  this.firstSkill = firstSkill;
-  this.secondSkill = secondSkill;
-  this.thirdSkill = thirdSkill;
-}
-
-Skills.prototype.allSkills= function() {
-  return this.firstSkill + ", " + this.secondSkill + ", " + this.thirdSkill;
-}
+Student.prototype.allSkills= function() {
+  return this.languageList.join(", ");
+};
 
 function resetFields() {
   $("input#full-name").val("");
@@ -53,18 +34,22 @@ function resetFields() {
   $("input#skill-one").val("");
   $("input#skill-two").val("");
   $("input#skill-three").val("");
-}
+};
+
+
+
+/******************************* JQUERY **************************/
+
 
 $(document).ready(function() {
+
+  /******* HOMEPAGE ********/
   $(".language-btn").click(function(event) {
     event.preventDefault();
     $(".language-links").hide();
-
-
     $("#row-2").fadeOut(400);
     $("#row-3").fadeIn(1600).addClass("animated slideInUp");
-
-    var input = $("#selection").val()
+    var input = $("#selection").val();
     if(input === "java") {
       $(".java").fadeIn(500);
     } else if (input === "javascript") {
@@ -81,36 +66,32 @@ $(document).ready(function() {
   });
 
 
+    /***** STUDENT PAGE *****/
     $("#new-portfolio").submit(function(event) {
       event.preventDefault();
-      var inputtedSkills = [];
       var inputtedFullName = $("input#full-name").val();
       var inputtedEducation = $("input#new-education").val();
-      var newPortfolio = new Portfolio(inputtedFullName, inputtedSkills, inputtedEducation);
-      var newEducation = new Portfolio(inputtedEducation);
+      var languageList = []
+      var skills = []
+      var testStudent = new Student (languageList, inputtedFullName, skills, inputtedEducation);
 
-    $("#skills").each(function() {
-      var inputtedSkillOne = $("input#skill-one").val();
-      var inputtedSkillTwo = $("input#skill-two").val();
+      /** PUSHES INTO LANGUAGE LIST ARRAY **/
       var inputtedSkillThree = $("input#skill-three").val();
-      var newSkills = new Skills(inputtedSkillOne, inputtedSkillTwo, inputtedSkillThree);
-      newPortfolio.Skills.push(newSkills);
+      var inputtedSkillTwo = $("input#skill-two").val();
+      var inputtedSkillOne = $("input#skill-one").val();
+      languageList.push(inputtedSkillOne);
+      languageList.push(inputtedSkillTwo);
+      languageList.push(inputtedSkillThree);
 
-    });
+      $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
 
-    $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
-
-    $(".clickName").last().click(function(){
-      $("#show-contact").show();
-      $("#show-contact h2").text(newPortfolio.fullName);
-      $(".full-name").text(newPortfolio.fullName);
-      console.log(newPortfolio.Education);
-      $(".education").text(newPortfolio.Education);
-      $("ul#skillsOutput").text("");
-      newPortfolio.Skills.forEach(function(skill) {
-        $("ul#skillsOutput").append("<li>" + skill.allSkills() + "</li>");
+      $(".clickName").last().click(function(){
+        $("#show-contact").show();
+        $("#show-contact h2").text(testStudent.fullName);
+        $(".full-name").text(testStudent.fullName);
+        $(".education").text(testStudent.education);
+        $("ul#skillsOutput").text(languageList.join(", "));
       });
-    });
 
     resetFields();
 

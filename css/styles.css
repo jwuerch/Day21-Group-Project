@@ -53,8 +53,8 @@
   height:700px;
 }
 
-.col-sm-12 {
-  padding-left: 0;
+#no-left-pad-col {
+  padding-left:0;
 }
 
 .container-fluid {
