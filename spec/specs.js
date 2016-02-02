@@ -1,9 +1,3 @@
-// describe("apiCall", function () {
-// it("will take in search querie and call indeed.com with that value", function () {
-//   expect(apiCall.status).to.equal(200);
-//   });
-// });
-
 describe ("Students", function(){
 
   it("will create students object based on specific parameters", function(){
@@ -17,16 +11,27 @@ describe ("Students", function(){
   });
 });
 
-describe("contactForm", function (){
-  it("will create contactForm object given specific properties", function () {
-    var testcontactForm = new contactForm ("John Taylor", "Test City", "Test Field Interest");
-    expect(testcontactForm.fullName).to.equal("John Taylor");
-    expect(testcontactForm.city).to.equal("Test City");
-    expect(testcontactForm.field).to.equal("Test Field Interest");
+
+describe("Portfolio", function (){
+  it("will create student portfolio object with given properties", function () {
+  var testPortfolio = new Portfolio("John Senn", "skills", "education");
+  expect(testPortfolio.fullName).to.equal("John Senn");
+  expect(testPortfolio.Skills).to.eql([]);
+  expect(testPortfolio.Education).to.equal("education");
   });
-    it("adds the fullcontactForm method to all specifications above", function() {
-    var testcontactForm = new contactForm("John Taylor", "Test City","Test Field Interest");
-    expect(testcontactForm.fullcontactForm()).to.equal("John Taylor, Test City, Test Field Interest");
+});
+
+describe("Skills", function (){
+  it("will create skills object based on user input", function (){
+    var testSkills = new Skills("skillOne", "skillTwo", "skillThree");
+    expect(testSkills.firstSkill).to.equal("skillOne");
+    expect(testSkills.secondSkill).to.equal("skillTwo");
+    expect(testSkills.thirdSkill).to.equal("skillThree");
+  });
+
+  it("add the allSkills method to all skills entered by the user", function (){
+    var testSkills = new Skills("skillOne", "skillTwo", "skillThree");
+    expect(testSkills.allSkills()).to.equal("skillOne, skillTwo, skillThree");
   });
 });
 

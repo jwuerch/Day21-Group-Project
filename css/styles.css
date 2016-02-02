@@ -166,3 +166,10 @@
 #widget-2 {
   height:265px;
 }
+#show-contact {
+  display: none;
+}
+
+#portfolios {
+  cursor: pointer;
+  color: #0088cc;

@@ -14,26 +14,32 @@ Students.prototype.pickLanguage = function (input) {
   return this.coreLanguage;
 }
 
-// function contactForm(fullName, city, field) {
-//   this.fullName = fullName;
-//   this.city = city;
-//   this.field = field;
-// }
-//
-// contactForm.prototype.fullcontactForm = function () {
-//   return this.fullName +", " + this.city + ", " + this.field;
-// }
 
-//
+function Portfolio(fullName, Skills, Education) {
+  this.fullName = fullName;
+  this.Skills = [];
+  this.Education = Education;
+}
+
+function Skills(firstSkill, secondSkill, thirdSkill) {
+  this.firstSkill = firstSkill;
+  this.secondSkill = secondSkill;
+  this.thirdSkill = thirdSkill;
+}
+
+Skills.prototype.allSkills= function() {
+  return this.firstSkill + ", " + this.secondSkill + ", " + this.thirdSkill;
+}
+
+function resetFields() {
+  $("input#full-name").val("");
+  $("input#new-education").val("");
+  $("input#skill-one").val("");
+  $("input#skill-two").val("");
+  $("input#skill-three").val("");
+}
+
 $(document).ready(function() {
-  // $("#meetupForm").click(function() {
-
-
-//  add form to display- use the address book example. update index as well
-
-
-
-
   $(".language-btn").click(function(event) {
     event.preventDefault();
     $(".language-links").hide();
@@ -56,5 +62,41 @@ $(document).ready(function() {
     } else if (input === "css") {
       $(".css").fadeIn(500);
     };
+  });
+
+
+    $("#new-portfolio").submit(function(event) {
+      event.preventDefault();
+      var inputtedSkills = [];
+      var inputtedFullName = $("input#full-name").val();
+      var inputtedEducation = $("input#new-education").val();
+      var newPortfolio = new Portfolio(inputtedFullName, inputtedSkills, inputtedEducation);
+      var newEducation = new Portfolio(inputtedEducation);
+
+    $("#skills").each(function() {
+      var inputtedSkillOne = $("input#skill-one").val();
+      var inputtedSkillTwo = $("input#skill-two").val();
+      var inputtedSkillThree = $("input#skill-three").val();
+      var newSkills = new Skills(inputtedSkillOne, inputtedSkillTwo, inputtedSkillThree);
+      newPortfolio.Skills.push(newSkills);
+
+    });
+
+    $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
+
+    $(".clickName").last().click(function(){
+      $("#show-contact").show();
+      $("#show-contact h2").text(newPortfolio.fullName);
+      $(".full-name").text(newPortfolio.fullName);
+      console.log(newPortfolio.Education);
+      $(".education").text(newPortfolio.Education);
+      $("ul#skillsOutput").text("");
+      newPortfolio.Skills.forEach(function(skill) {
+        $("ul#skillsOutput").append("<li>" + skill.allSkills() + "</li>");
+      });
+    });
+
+    resetFields();
+
   });
 });
