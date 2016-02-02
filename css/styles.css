@@ -173,3 +173,23 @@
 #portfolios {
   cursor: pointer;
   color: #0088cc;
+}
+
+#show-contact, #portfolios {
+  font-size: 20px;
+}
+
+#portColor {
+  color: #fff;
+  line-height:32px;
+  margin-bottom:30px;
+  font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
+}
+
+#portDesc {
+  color: #fff;
+  font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
+}
+ .container .col-sm-4 {
+   height: auto;
+ }
