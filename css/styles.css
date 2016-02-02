@@ -1,7 +1,7 @@
 
 .jumbotron {
   background-image: url("../img/jumbotron-image.jpg");
-  height:440px;
+  height:320px;
   text-align: center;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .language-btn {
-  font-size:20px;
+  font-size:16px;
 }
 
 #row-1 {
@@ -69,6 +69,10 @@
   height:165px;
 }
 
+.youtube {
+  min-height:300px;
+}
+
 #widget-2 {
   height:300px;
 }
@@ -79,4 +83,12 @@
 
 .java, .javascript, .ruby, .php, .cSharp, .css {
   display:none;
+}
+
+#language-choice {
+  font-size: 36px;
+  color: #fff;
+  line-height:32px;
+  margin-bottom:30px;
+  font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
 }

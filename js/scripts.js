@@ -38,17 +38,17 @@ $(document).ready(function() {
 
     var input = $("#selection").val()
     if(input === "java") {
-      $(".java").fadeIn(1000);
+      $(".java").fadeIn(500);
     } else if (input === "javascript") {
-      $(".javascript").fadeIn(1000);
+      $(".javascript").fadeIn(500);
     } else if (input === "ruby") {
-      $(".ruby").fadeIn(1000);
+      $(".ruby").fadeIn(500);
     } else if (input === "php") {
-      $(".php").fadeIn(1000);
+      $(".php").fadeIn(500);
     } else if (input === "cSharp") {
-      $(".cSharp").fadeIn(1000);
+      $(".cSharp").fadeIn(500);
     } else if (input === "css") {
-      $(".css").fadeIn(1000);
+      $(".css").fadeIn(500);
     };
   });
 });
