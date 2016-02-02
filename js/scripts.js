@@ -8,26 +8,23 @@ Students.prototype.pickLanguage = function (input) {
   return this.coreLanguage;
 }
 
-function contactForm(fullName, city, field) {
+function Portfolio(fullName, Skills, Education) {
   this.fullName = fullName;
-  this.city = city;
-  this.field = field;
+  this.Skills = [];
+  this.Education = Education;
 }
 
-contactForm.prototype.fullcontactForm = function () {
-  return this.fullName +", " + this.city + ", " + this.field;
+function Skills(firstSkill, secondSkill, thirdSkill) {
+  this.firstSkill = firstSkill;
+  this.secondSkill = secondSkill;
+  this.thirdSkill = thirdSkill;
 }
 
+Skills.prototype.allSkills= function() {
+  return this.firstSkill + ", " + this.secondSkill + ", " + this.thirdSkill;
+}
 
 $(document).ready(function() {
-  $("#meetupForm").click(function() {
-
-  }
-//  add form to display- use the address book example. update index as well
-
-
-
-
   $(".language-btn").click(function(event) {
     event.preventDefault();
 
@@ -51,5 +48,28 @@ $(document).ready(function() {
     } else if (input === "css") {
       $("#css").show();
     };
+  });
+
+});
+
+  $(document).ready(function() {
+    $("#portfolioBtn").submit(function(event) {
+      event.preventDefault();
+      alert("hello");
+    //   var inputtedFullName = $("input#full-name").val();
+    //   var inputtedEducation = $("input#new-education").val();
+    //   var newPortfolio = new Portfolio(inputtedFullName);
+    //
+    // $("#skills").each(function() {
+    //   var inputtedSkillOne = $("input#skill-one").val();
+    //   var inputtedSkillTwo = $("input#skill-two").val();
+    //   var inputtedSkillThree = $("input#skill-three").val();
+    //   var newSkills = new Skills(inputtedSkillOne, inputtedSkillTwo, inputtedSkillThree);
+    //   newPortfolio.skillsOutput.push(newSkills);
+
+    // });
+
+    // $("ul#portfolios").append("<li><span class='clickName'>" + newPortfolio + "</span></li>");
+
   });
 });
