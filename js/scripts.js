@@ -34,22 +34,21 @@ $(document).ready(function() {
 
 
     $("#row-2").fadeOut(400);
-    $("#row-3").fadeIn(1600);
-    $("#row-3").addClass("animated slideInUp");
+    $("#row-3").fadeIn(1600).addClass("animated slideInUp");
 
     var input = $("#selection").val()
     if(input === "java") {
-      $(".java").show();
+      $(".java").fadeIn(1000);
     } else if (input === "javascript") {
-      $(".javascript").show();
+      $(".javascript").fadeIn(1000);
     } else if (input === "ruby") {
-      $(".ruby").show();
+      $(".ruby").fadeIn(1000);
     } else if (input === "php") {
-      $(".php").show();
+      $(".php").fadeIn(1000);
     } else if (input === "cSharp") {
-      $(".cSharp").show();
+      $(".cSharp").fadeIn(1000);
     } else if (input === "css") {
-      $(".css").show();
+      $(".css").fadeIn(1000);
     };
   });
 });
