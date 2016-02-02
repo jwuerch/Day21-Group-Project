@@ -53,23 +53,36 @@ $(document).ready(function() {
 });
 
   $(document).ready(function() {
-    $("#portfolioBtn").submit(function(event) {
+    $("#new-portfolio").submit(function(event) {
       event.preventDefault();
-      alert("hello");
-    //   var inputtedFullName = $("input#full-name").val();
-    //   var inputtedEducation = $("input#new-education").val();
-    //   var newPortfolio = new Portfolio(inputtedFullName);
-    //
-    // $("#skills").each(function() {
-    //   var inputtedSkillOne = $("input#skill-one").val();
-    //   var inputtedSkillTwo = $("input#skill-two").val();
-    //   var inputtedSkillThree = $("input#skill-three").val();
-    //   var newSkills = new Skills(inputtedSkillOne, inputtedSkillTwo, inputtedSkillThree);
-    //   newPortfolio.skillsOutput.push(newSkills);
+      var inputtedSkills = [];
+      var inputtedFullName = $("input#full-name").val();
+      var inputtedEducation = $("input#new-education").val();
+      var newPortfolio = new Portfolio(inputtedFullName, inputtedSkills, inputtedEducation);
+      var newEducation = new Portfolio(inputtedEducation);
 
-    // });
+    $("#skills").each(function() {
+      var inputtedSkillOne = $("input#skill-one").val();
+      var inputtedSkillTwo = $("input#skill-two").val();
+      var inputtedSkillThree = $("input#skill-three").val();
+      var newSkills = new Skills(inputtedSkillOne, inputtedSkillTwo, inputtedSkillThree);
+      newPortfolio.Skills.push(newSkills);
 
-    // $("ul#portfolios").append("<li><span class='clickName'>" + newPortfolio + "</span></li>");
+    });
+
+    $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
+
+    $(".clickName").last().click(function(){
+      $("#show-contact").show();
+      $("#show-contact h2").text(newPortfolio.fullName);
+      $(".full-name").text(newPortfolio.fullName);
+      console.log(newPortfolio.Education);
+      $(".education").text(newPortfolio.Education);
+      $("ul#skillsOutput").text("");
+      newPortfolio.Skills.forEach(function(skill) {
+        $("ul#skillsOutput").append("<li>" + skill.allSkills() + "</li>");
+      });
+    });
 
   });
 });
