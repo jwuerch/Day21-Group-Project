@@ -1,8 +1,24 @@
+
 function Company(companyName, industry, desires) {
   this.companyName = companyName;
   this.industry = industry;
   this.desires = desires;
+  this.matchedSkills = []
 }
+
+Company.prototype.skillMatch= function(studentSkills) {
+for (var i = 0; i < this.desires.length; i++) {
+  for(var i = 0; i < studentSkills.length; i++) {
+    if(this.desires[i] === studentSkills[i]) {
+      this.matchedSkills.push(studentSkills[i]);
+    };
+  };
+  return this.matchedSkills;
+  };
+};
+
+
+
 
 
 function Students(coreLanguage) {
