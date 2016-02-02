@@ -77,6 +77,13 @@
   height:300px;
 }
 
+.img-car {
+  height:201px !important;
+  width:268px;
+  max-height:201px;
+  min-height:201px;
+}
+
 #row-3 {
   /*display:none;*/
 }
@@ -91,4 +98,38 @@
   line-height:32px;
   margin-bottom:30px;
   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
+}
+
+.car-link {
+  color:#fff;
+  font-size:16px;
+  text-decoration:none;
+}
+
+.widget-title-box {
+  font-family:Roboto, sans-serif;
+  color:#4f5c7b;
+  font-size:12px;
+}
+
+.widget-title-box h4 {
+  font-size:16px;
+}
+
+.car-link:hover {
+  color:#000;
+  text-decoration:underline;
+}
+
+.carousel-caption {
+  left: 0px;
+  right:0px;
+  background-color:rgba(0, 0, 0, 0.4);
+  position:relative;
+  top:-72px;
+  height:auto;
+}
+
+#widget-2 {
+  height:265px;
 }
