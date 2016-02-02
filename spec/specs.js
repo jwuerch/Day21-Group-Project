@@ -29,3 +29,19 @@ describe("contactForm", function (){
     expect(testcontactForm.fullcontactForm()).to.equal("John Taylor, Test City, Test Field Interest");
   });
 });
+
+describe("Company", function () {
+  var company = new Company("intel", "computers", ["Javascript", "CSS"]);
+  it("will allow company to input desired candidates skills", function () {
+
+    expect(company.companyName).to.equal('intel');
+    expect(company.industry).to.equal('computers');
+    expect(company.desires).to.eql(["Javascript", "CSS"])
+
+  })
+
+  // it("will match company desires and student profiles", function () {
+  //
+  // })
+
+})

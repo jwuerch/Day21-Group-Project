@@ -1,3 +1,9 @@
+function Company(companyName, industry, desires) {
+  this.companyName = companyName;
+  this.industry = industry;
+  this.desires = desires;
+}
+
 
 function Students(coreLanguage) {
   this.coreLanguage = coreLanguage;
