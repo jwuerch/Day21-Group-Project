@@ -81,6 +81,7 @@ $(document).ready(function() {
     /***** STUDENT PAGE *****/
     $("#new-portfolio").submit(function(event) {
       event.preventDefault();
+      $("#portfolios").fadeIn(1600);
       var inputtedFullName = $("input#full-name").val();
       var inputtedEducation = $("input#new-education").val();
       var languageList = []
@@ -98,7 +99,7 @@ $(document).ready(function() {
       $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
 
       $(".clickName").last().click(function(){
-        $("#show-contact").show();
+        $("#show-contact").fadeIn(1600);
         $("#show-contact h2").text(testStudent.fullName);
         $(".full-name").text(testStudent.fullName);
         $(".education").text(testStudent.education);
@@ -125,8 +126,10 @@ $(document).ready(function() {
     $(".desired-skills").text("Requested Skills: " + testCompany.listDesires())
 
     $(".sName").text("Student Name: " + Jason.fullName)
-    $(".sMatched").text("This student has the following requested skills: " + testCompany.skillMatch(Jason.languageList).join(", "));
+    $(".sMatched").text("This student has the following requested skills: ")
+    $(".skillListed").text(testCompany.skillMatch(Jason.languageList).join(", "));
     $(".otherSkills").text("Other skills this student has: " + Jason.skills)
+    console.log(testCompany.skillMatch(Jason.languageList).join(", "))
 
     event.preventDefault();
   })
