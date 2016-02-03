@@ -177,6 +177,7 @@
 
 #show-contact, #portfolios {
   font-size: 20px;
+  margin-left: 30px;
 }
 
 #portColor {
@@ -192,4 +193,13 @@
 }
  .container .col-sm-4 {
    height: auto;
+ }
+
+ .portTitles, #new-portfolio, .indPort {
+   color: #3B1153;
+   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
+
+ }
+ #new-portfolio {
+   font-size: 20px;
  }
