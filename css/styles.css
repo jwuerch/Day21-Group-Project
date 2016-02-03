@@ -234,3 +234,10 @@
 #aboutBody p{
   font-size: 17px;
 }
+
+#aboutImg {
+  border-radius: 50%;
+  margin: auto;
+  padding-bottom: 10px;
+  width: 236px;
+}

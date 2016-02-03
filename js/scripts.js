@@ -79,6 +79,7 @@ $(document).ready(function() {
     /***** STUDENT PAGE *****/
     $("#new-portfolio").submit(function(event) {
       event.preventDefault();
+      $("#portfolios").fadeIn(1600);
       var inputtedFullName = $("input#full-name").val();
       var inputtedEducation = $("input#new-education").val();
       var languageList = []
@@ -96,7 +97,7 @@ $(document).ready(function() {
       $("ul#portfolios").append("<li><span class='clickName'>" + inputtedFullName + "</span></li>");
 
       $(".clickName").last().click(function(){
-        $("#show-contact").show();
+        $("#show-contact").fadeIn(1600);
         $("#show-contact h2").text(testStudent.fullName);
         $(".full-name").text(testStudent.fullName);
         $(".education").text(testStudent.education);
