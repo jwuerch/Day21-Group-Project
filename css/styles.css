@@ -179,14 +179,14 @@
   margin-left: 30px;
 }
 
-#portColor {
+#portColor, #aboutColor {
   color: #fff;
   line-height:32px;
   margin-bottom:30px;
   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
 }
 
-#portDesc {
+#portDesc, #aboutDesc {
   color: #fff;
   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
 }
@@ -225,3 +225,12 @@
  .no-left-pad-col {
    padding-left:0 !important;
  }
+
+#aboutBody {
+  text-align: center;
+  font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif
+}
+
+#aboutBody p{
+  font-size: 17px;
+}
