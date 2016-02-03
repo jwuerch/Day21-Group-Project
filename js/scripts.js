@@ -1,4 +1,6 @@
 
+
+
 function Company(companyName, industry, desires) {
   this.companyName = companyName;
   this.industry = industry;
@@ -8,13 +10,16 @@ function Company(companyName, industry, desires) {
 
 Company.prototype.skillMatch= function(studentSkills) {
 for (var i = 0; i < this.desires.length; i++) {
-  for(var i = 0; i < studentSkills.length; i++) {
-    if(this.desires[i] === studentSkills[i]) {
-      this.matchedSkills.push(studentSkills[i]);
+  // debugger;
+
+  for(var x = 0; x < studentSkills.length; x++) {
+    if(this.desires[i] === studentSkills[x]) {
+      this.matchedSkills.push(studentSkills[x]);
     };
   };
-  return this.matchedSkills;
   };
+  return this.matchedSkills;
+
 };
 
 function Student(languageList, fullName, skills, education) {
@@ -42,6 +47,10 @@ function resetFields() {
 
 
 $(document).ready(function() {
+    var Jason = new Student(["PHP", "Javascript", "CSS", "HTML"], "Jason W", ["Wordpress", "SEO", "Content Writing"], "Epicodus")
+    var Nike = new Company("Nike", "Sports", ["C#", "Javascript", "CSS"])
+    var Intel = new Company("Intel", "Tech", ["PHP", "Javascript", "Java"])
+
 
   /******* HOMEPAGE ********/
   $(".language-btn").click(function(event) {
@@ -50,6 +59,7 @@ $(document).ready(function() {
     $("#row-2").fadeOut(400);
     $("#row-3").fadeIn(1600).addClass("animated slideInUp");
     var input = $("#selection").val();
+
     if(input === "java") {
       $(".java").fadeIn(500);
     } else if (input === "javascript") {
@@ -95,4 +105,23 @@ $(document).ready(function() {
 
     resetFields();
   });
+
+
+  $("#new-company").submit(function(event) {
+    var companyName = $("#company-name").val();
+    var industry = $("#industry").val();
+    var skill1 = $("#needed-one").val();
+    var skill2 = $("#needed-two").val();
+    var skill3 = $("#needed-three").val();
+    // debugger;
+    var testCompany = new Company(companyName, industry, [skill1, skill2, skill3])
+    console.log(testCompany)
+    $("#new-company").fadeOut(2000);
+    $("#companyName").text(testCompany.companyName);
+
+    $("#companyPrintout").append(testCompany.skillMatch(Jason.languageList).join(", "));
+
+
+    event.preventDefault();
+  })
 });

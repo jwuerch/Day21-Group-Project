@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Local Companies</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">NextStep</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Create a Portfolio</a></li>
+              <li><a href="companies.html">Local Companies</a></li>
+
+
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="search-home jumbotron">
+        <div class="row" class="search-form-title" id="row-1">
+          <div class="container-fluid">
+            <div class="col-sm-12">
+              <h1 id="portColor">Portland Local Companies</h1>
+              <p id="portDesc">Here are a few tech companies within the area</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/nike.jpg">
+        </div>
+
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/columbia.jpg">
+        </div>
+
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/intel.jpg">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/new-relic.jpg">
+        </div>
+
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/adidas.png">
+        </div>
+
+        <div class="col-sm-4">
+          <img class = "img-responsive" src="img/thetus.jpg">
+        </div>
+      </div>
+
+      <form id="new-company">
+        <div class="form-group">
+          <label for="new-name">Company Name</label>
+          <input type="text" class="form-control" id="company-name">
+        </div>
+
+        <div class="form-group">
+          <label for="new-education">Industry</label>
+          <input type="text" class="form-control" id="industry">
+        </div>
+
+        <div id="skills">
+          <h4>Skills needed in an employee</h4>
+          <div class="form-group">
+            <label for="skillOne">Skill One</label>
+            <input type="text" class="form-control" id="needed-one">
+          </div>
+          <div class="form-group">
+            <label for="skillTwo">Skill Two</label>
+            <input type="text" class="form-control" id="needed-two">
+          </div>
+          <div class="form-group">
+            <label for="skillThree">Skill Three</label>
+            <input type="text" class="form-control" id="needed-three">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger" id="createCompany">Create Company Profile</button>
+      </form>
+      <p id = "companyPrintout"></p>
+
+      <div class="row">
+        <div class="col-sm-12" id="match-col">
+          <div class="row">
+            <div class="col-sm-12" id="companyProfile">
+              <h3 id="companyName">Company Name</h3>
+              <div class="industry">Industry</div>
+              <div class="desired-skills">Desired Skills</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12" id="studentProfile">
+              <h3 class="fullName">Student Name</h3>
+              <div class="printSkills">Student Name</div>
+              <h3 class="studentName">Skills</h3>
+              <div class="printName">Desired Skills</div>
+              <h3 class="studentName">Desired Skills</h3>
+              <div class="printEdu">Desired Skills</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+  </body>
+</html>
