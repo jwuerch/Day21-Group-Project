@@ -1,11 +1,12 @@
-
-
-
 function Company(companyName, industry, desires) {
   this.companyName = companyName;
   this.industry = industry;
   this.desires = desires;
   this.matchedSkills = []
+}
+
+Company.prototype.listDesires = function(desires) {
+  return this.desires.join(", ")
 }
 
 Company.prototype.skillMatch= function(studentSkills) {
@@ -54,6 +55,7 @@ $(document).ready(function() {
 
   /******* HOMEPAGE ********/
   $(".language-btn").click(function(event) {
+    $(".col-sm-4").fadeIn(500);
     event.preventDefault();
     $(".language-links").hide();
     $("#row-2").fadeOut(400);
@@ -106,6 +108,7 @@ $(document).ready(function() {
     resetFields();
   });
 
+  /***** COMPANY PAGE *****/
 
   $("#new-company").submit(function(event) {
     var companyName = $("#company-name").val();
@@ -113,14 +116,17 @@ $(document).ready(function() {
     var skill1 = $("#needed-one").val();
     var skill2 = $("#needed-two").val();
     var skill3 = $("#needed-three").val();
-    // debugger;
     var testCompany = new Company(companyName, industry, [skill1, skill2, skill3])
     console.log(testCompany)
     $("#new-company").fadeOut(2000);
-    $("#companyName").text(testCompany.companyName);
+    $("#match-col").fadeIn(4000);
+    $(".cName").text(testCompany.companyName);
+    $(".cIndustry").text("Industry :" + testCompany.industry);
+    $(".desired-skills").text("Requested Skills: " + testCompany.listDesires())
 
-    $("#companyPrintout").append(testCompany.skillMatch(Jason.languageList).join(", "));
-
+    $(".sName").text("Student Name: " + Jason.fullName)
+    $(".sMatched").text("This student has the following requested skills: " + testCompany.skillMatch(Jason.languageList).join(", "));
+    $(".otherSkills").text("Other skills this student has: " + Jason.skills)
 
     event.preventDefault();
   })

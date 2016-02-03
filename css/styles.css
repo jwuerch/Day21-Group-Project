@@ -27,9 +27,8 @@
 #row-2 {
   text-align: center;
   height: auto;
-  margin-right: 0px;
   margin-bottom: 30px;
-  /*padding-right: 0px;*/
+  padding-right: 0px;
   box-shadow: 1px 3px 4px 2px rgba(0,0,0,0.2), inset 0px 0px 2px 1px #fff;
 
 }
@@ -225,3 +224,87 @@
  .no-left-pad-col {
    padding-left:0 !important;
  }
+
+.jobs-col, .sidebar, .education-col {
+   display:none;
+ }
+
+ #match-col {
+   display: none;
+ }
+
+ #companyProfile {
+   padding-top:15px;
+ }
+
+ .cName {
+   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif;
+   font-weight:700;
+   font-size:700px;
+   font-size: 26px;
+   color: #000;
+   text-decoration:underline;
+   text-align:center;
+ }
+
+ .cIndustry {
+   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif;
+   font-weight:700;
+   font-size:700px;
+   font-size: 16px;
+   color: #000;
+   text-decoration:underline;
+   color:blue;
+   text-align:center;
+ }
+
+ .desired-skills {
+   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif;
+   font-weight:700;
+   font-size:700px;
+   font-size: 16px;
+   color: #000;
+   text-decoration:underline;
+   color:blue;
+   text-align:center;
+ }
+
+ #studentProfile {
+   padding-top:15px;
+ }
+
+ .studentPic {
+   max-width:200px;
+   max-height:200px;
+   border-radius: 100%;
+   border: 1px solid #d1d1d1;
+ }
+
+ .sName {
+   font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif;
+   font-weight:700;
+   font-size:700px;
+   font-size: 26px;
+   color: #000;
+   text-decoration:underline;
+   magin:0 auto;
+ }
+
+#studentProfileText {
+  padding-top:15px;
+  font-size:16px;
+  font-family: HelveticaNeue-Thin,HelveticaNeue-Light,HelveticaNeue,"Helvetica Neue Thin","Helvetica Neue Light","Helvetica Neue","Open Sans",Helvetica,Arial,sans-serif;
+  font-weight:700;
+}
+
+.sMatched {
+  color:blue;
+}
+
+.otherSkills {
+  color:blue;
+}
+
+#skillsOutput {
+  padding-left:0;
+}
