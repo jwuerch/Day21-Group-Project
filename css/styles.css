@@ -327,4 +327,8 @@ body {
   .sidebar {
     display:none !important;
   }
+
+  .jobs-col {
+    margin-right:35px !important;
+  }
 }
