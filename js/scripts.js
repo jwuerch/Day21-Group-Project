@@ -60,6 +60,7 @@ $(document).ready(function() {
     $(".language-links").hide();
     $("#row-2").fadeOut(400);
     $("#row-3").fadeIn(1600).addClass("animated slideInUp");
+    $(".sidebar").fadeIn(1600).addClass("animated slideInUp")
     var input = $("#selection").val();
 
     if(input === "java") {

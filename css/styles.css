@@ -64,8 +64,8 @@
 }
 
 .sidebar {
-  width:332px;
   float:right;
+  display:none;
 
 }
 
@@ -81,7 +81,6 @@
 
 .widget {
   border:1px solid #D7D7E4;
-  width:300px;
   padding:15px;
   padding-top:8px;
   box-shadow: 1px 3px 4px 2px rgba(0,0,0,0.2), inset 0px 0px 2px 1px #fff;
@@ -112,7 +111,7 @@
 }
 
 #row-3 {
-  /*display:none;*/
+  margin-left:15px;
 }
 
 .java, .javascript, .ruby, .php, .cSharp, .css {
@@ -203,6 +202,7 @@
    padding-top:5px;
  }
 
+
  #studentProfile {
    border-top: 1px dashed #d1d1d1;
  }
@@ -225,7 +225,7 @@
    padding-left:0 !important;
  }
 
-.jobs-col, .sidebar, .education-col {
+.jobs-col, .education-col {
    display:none;
  }
 
@@ -321,4 +321,10 @@ body {
 
 .skillListed {
   color:blue;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display:none !important;
+  }
 }
