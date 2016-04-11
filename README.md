@@ -8,8 +8,13 @@ The authors on the project are: Jason Wuerch, Erik Tolentino, Polina Nenchev, Al
 
 This project will allow the user to select specific criteria which will then display a list of job openings that the user qualifies for. Criteria is geared towards Epicodus students and the job listings are gathered from the Portland Metro Area. To apply for the specific job, the application will allow the user to click on the actual link of the company hiring.
 
-### visit our page here!
+### Visit our page here!
 [Find your dream company](http://jwuerch.github.io/Day21-Group-Project/)
+
+### Installation Instructions
+
+* _Clone this repository_
+* _Open 'index.html'_
 
 ### Technologies Used:
 * Atom
@@ -19,7 +24,7 @@ This project will allow the user to select specific criteria which will then dis
 * Specs
 * GitHub
 * Bootstrap
-* Mocha and Chai js
+* Mocha and Chai JS
 
 
 ## Copyright and License Information
